@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Admin Dashboard" name="description">
+        <meta content="ThemeDesign" name="author">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Quản Trị Sản Xuất</title>
+
+        <link rel="shortcut icon" href="assets\images\favicon.ico">
+
+        <link href="assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="assets\css\icons.css" rel="stylesheet" type="text/css">
+        <link href="assets\css\style.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+
+    <body class="fixed-left">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+            <div class="topbar">
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <div class="text-center">
+                        <a href="index.html" class="logo"><img src="assets\images\logo.png" alt="logo-img"></a>
+                        <a href="index.html" class="logo-sm"><img src="assets\images\logo_sm.png" alt="logo-img"></a>
+                    </div>
+                </div>
+                <!-- Button mobile view to collapse sidebar menu -->
+                
+
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <ul class="list-inline menu-left mb-0">
+                            <li class="float-left">
+                                <button class="button-menu-mobile open-left waves-light waves-effect">
+                                    <i class="mdi mdi-menu"></i>
+                                </button>
+                            </li>
+                            <li class="hide-phone app-search float-left">
+                                <form role="search" class="navbar-form">
+                                    <input type="text" placeholder="Search..." class="form-control search-bar">
+                                    <a href="" class="btn-search"><i class="fa fa-search"></i></a>
+                                </form>
+                            </li>
+                        </ul>
+    
+                        <ul class="nav navbar-right float-right list-inline">
+                            <li class="dropdown d-none d-sm-block">
+                                <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light notification-icon-box" data-toggle="dropdown" aria-expanded="true">
+                                    <i class="fa fa-bell"></i> <span class="badge badge-xs badge-danger"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-lg">
+                                    <li class="text-center notifi-title">Notification <span class="badge badge-xs badge-success">3</span></li>
+                                    <li class="list-group">
+                                        <!-- list item-->
+                                        <a href="javascript:void(0);" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-heading">Your order is placed</div>
+                                                <p class="m-0">
+                                                <small>Dummy text of the printing and typesetting industry.</small>
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <!-- list item-->
+                                        <a href="javascript:void(0);" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-body clearfix">
+                                                <div class="media-heading">New Message received</div>
+                                                <p class="m-0">
+                                                    <small>You have 87 unread messages</small>
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- list item-->
+                                        <a href="javascript:void(0);" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-body clearfix">
+                                                <div class="media-heading">Your item is shipped.</div>
+                                                <p class="m-0">
+                                                    <small>It is a long established fact that a reader will</small>
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- last list item -->
+                                        <a href="javascript:void(0);" class="list-group-item">
+                                            <small class="text-primary">See all notifications</small>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="d-none d-sm-block">
+                                <a href="#" id="btn-fullscreen" class="waves-effect waves-light notification-icon-box"><i class="mdi mdi-fullscreen"></i></a>
+                            </li>
+                            
+                            <li class="dropdown">
+                                <a href="" class="dropdown-toggle profile waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
+                                    <img src="assets\images\users\avatar-1.jpg" alt="user-img" class="rounded-circle">
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="javascript:void(0)" class="dropdown-item"> Profile</a></li>
+                                    <li><a href="javascript:void(0)" class="dropdown-item"><span class="badge badge-success float-right">5</span> Settings </a></li>
+                                    <li><a href="javascript:void(0)" class="dropdown-item"> Lock screen</a></li>
+                                    <li class="dropdown-divider"></li>
+                                    <li><a href="javascript:void(0)" class="dropdown-item"> Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- Top Bar End -->
+
+
+            <!-- ========== Left Sidebar Start ========== -->
+
+            <div class="left side-menu">
+                <div class="sidebar-inner slimscrollleft">
+
+                    <div id="sidebar-menu">
+                        <ul>
+                            <li class="menu-title">Menu</li>
+                            <li>
+                                <a href="index.html" class="waves-effect"><i class="mdi mdi-home"></i><span> Trang Chủ <span class="badge badge-pill badge-primary float-right">1</span></span></a>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-album"></i> <span> Quản Lý Kho </span> <span class="float-right"><i class="mdi mdi-plus"></i></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="material.html">Nguyên Vật Liệu</a></li>
+                                    <li><a href="ui-buttons.html">Thống Kê</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-layers"></i><span> Thành Phẩm </span><span class="float-right"><i class="mdi mdi-plus"></i></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="product.html">Định Mức NVL</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-chart-pie"></i><span> Dự Án </span><span class="float-right"><i class="mdi mdi-plus"></i></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="addproject.html">Dự Án Mới</a></li>
+                                    <li><a href="project.html">Thông Tin</a></li>
+                                    <li><a href="worker.html">Nhân Công</a></li>
+                                </ul>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div> <!-- end sidebarinner -->
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- Start right Content here -->
+
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+
+                    <div class="">
+                        <div class="page-header-title">
+                            <h4 class="page-title">Dự Án</h4>
+                        </div>
+                    </div>
+
+                    <div class="page-content-wrapper ">
+
+                        <div class="container-fluid">
+
+                            <div id="plan-container" style="background-color: #3b4654; padding: 5px;">
+                                <div class="plan-form">
+                                  <div class="product-selector header-block" style="display: flex; justify-content: space-between;">
+                                    
+                                    <h5><span><i class="fas fa-list-ul fa-sm"></i></span> Thành Phẩm</h5>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                  </div>
+                        
+                                  <div class="form-row p-2">
+                                    <div class="form-group col-md-5">
+                                      <label for="product-name" style="color: #fff;">Mã Thành Phẩm</label>
+                                      <input type="text" class="form-control" id="product-id" disabled data-id/>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                      <label for="product-unit" style="color: #fff;">Tên Thành Phẩm</label>
+                                      <input type="text" class="form-control" id="product-name" />
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="form-group col-1">
+                            
+                                    </div>
+                                  </div>
+                        
+                                  <div class="product-container" id="product-container" style="display: none;">
+                                    <table
+                                      class="table table-hover table-bordered text-center"
+                                    >
+                                      <thead>
+                                        <tr>
+                                          <th scope="col">Mã Thành Phẩm</th>
+                                          <th scope="col">Tên Thành Phẩm</th>
+                                          <th scope="col">Số Lượng</th>
+                                          <th scope="col">Đơn Vị</th>
+                                          <th scope="col">Mô Tả</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody id="product-search-result" style="color: #fff;">
+                                        <!-- Product Data -->
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                        
+                              </div>
+                        
+                              
+                              <div class="plan-nextstep plan-container mt-2" id="plan-nextstep" style="background-color: #3b4654; padding: 5px;display: none;">
+                                <div class="header-block" style="display: flex; justify-content: space-between;">
+                                  <h5><span><i class="fas fa-list-ul fa-sm"></i></span> Thông Tin</h5>
+                                  <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                                
+                                <div class="form-row p-2">
+                                  <div class="form-group col-md-5">
+                                    <label for="product-name" style="color: #fff;">Tên Dự Án</label>
+                                    <input type="text" class="form-control" id="plan-name" />
+                                  </div>
+                                  <div class="form-group col-md-5">
+                                    <label for="product-unit" style="color: #fff;">Mô Tả</label>
+                                    <textarea class="form-control" id="plan-description" rows="3">
+                                    </textarea>
+                                  </div>
+                                </div>
+                        
+                                <div class="form-row p-2">
+                                  <div class="form-group col-md-5">
+                                    <label for="product-name" style="color: #fff;">Ngày Khởi Công</label>
+                                    <input type="date" class="form-control" id="plan-start-date" />
+                                  </div>
+                                  <div class="form-group col-md-5">
+                                    <label for="product-unit" style="color: #fff;">Ngày Kết Thúc</label>
+                                    <input type="date" class="form-control" id="plan-end-date" />
+                                  </div>
+                                </div>
+                        
+                                <div class="form-row p-2">
+                                  <div class="form-group col-md-5">
+                                    <label for="plan-address" style="color: #fff;">Địa Điểm</label>
+                                    <input type="text" class="form-control" id="plan-address" />
+                                  </div>
+                                  <div class="form-group col-md-5">
+                                    <label for="product-customer" style="color: #fff;">Khách Hàng</label>
+                                    <input type="text" class="form-control" id="plan-customer" />
+                                  </div>
+                                </div>
+                                
+                              </div>
+                        
+                              <div class="worker-container plan-container mt-2" id="worker-nextstep" style="background-color: #3b4654; padding: 5px; display: none;">
+                                <div class="header-block" style="display: flex; justify-content: space-between;">
+                                  <h5><span><i class="fas fa-list-ul fa-sm"></i></span> Công Nhân</h5>
+                                  <div>
+                                    <i class="far fa-edit mr-2 " data-toggle="modal" data-target=".worker-modal"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                  </div>
+                                  
+                                </div>
+                               
+                                <table
+                                  class="table table-hover table-bordered text-center"
+                                >
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Mã Công Nhân</th>
+                                      <th scope="col">Tên Công Nhân</th>
+                                      <th scope="col">Ngày Sinh</th>
+                                      <th scope="col">Số Điện Thoại</th>
+                                      <th scope="col">Địa Chỉ</th>
+                                      <th scope="col">Trạng Thái</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody id="worker-table" style="color: #fff;">
+                                    <!-- Worker Data -->
+                                  </tbody>
+                                </table>
+                        
+                                <div class="text-center">
+                                  <button type="button" class="btn btn-success btn-sm" id="plan-save" data-id>
+                                    Xác nhận
+                                  </button>
+                                </div>
+                        
+                              </div>
+                              
+                        
+                              <!-- Product Modal -->
+                              <div class="modal fade worker-modal" tabindex="-1" role="dialog" aria-labelledby="workerModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                  <div class="modal-content">
+                                    <div class="mb-2">
+                                      <input type="text" class="p-1" placeholder="Nhập tên để tìm kiếm..." id="worker-search">
+                                    </div>
+                        
+                                    <table
+                                    class="table table-hover table-bordered text-center"
+                                  >
+                                    <thead>
+                                      <tr>
+                                        <th scope="col" style="color: black;">Mã Công Nhân</th>
+                                        <th scope="col" style="color: black;">Tên Công Nhân</th>
+                                        <th scope="col" style="color: black;">Ngày Sinh</th>
+                                        <th scope="col" style="color: black;">Số Điện Thoại</th>
+                                        <th scope="col" style="color: black;">Địa Chỉ</th>
+                                        <th scope="col" style="color: black;">Trạng Thái</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="worker-search-result">
+                                      <!-- Worker Data -->
+                                    </tbody>
+                                  </table>
+                                  </div>
+                                </div>
+                              </div>
+
+                        </div><!-- container -->
+
+                    </div> <!-- Page content Wrapper -->
+
+                </div> <!-- content -->
+
+                <footer class="footer">
+                    © 2016 - 2018 Appzia - All Rights Reserved.
+                </footer>
+
+            </div>
+            <!-- End Right content here -->
+
+        </div>
+        <!-- END wrapper -->
+
+
+        <!-- jQuery  -->
+        <script src="assets\js\jquery.min.js"></script>
+        <script src="assets\js\popper.min.js"></script>
+        <script src="assets\js\bootstrap.min.js"></script>
+        <script src="assets\js\modernizr.min.js"></script>
+        <script src="assets\js\detect.js"></script>
+        <script src="assets\js\fastclick.js"></script>
+        <script src="assets\js\jquery.slimscroll.js"></script>
+        <script src="assets\js\jquery.blockUI.js"></script>
+        <script src="assets\js\waves.js"></script>
+        <script src="assets\js\wow.min.js"></script>
+        <script src="assets\js\jquery.nicescroll.js"></script>
+        <script src="assets\js\jquery.scrollTo.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <script src="assets\js\app.js"></script>
+        <script src="assets\js\addproject.js"></script>
+
+    </body>
+</html>
