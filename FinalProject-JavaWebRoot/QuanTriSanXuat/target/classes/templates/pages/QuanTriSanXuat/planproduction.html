@@ -1,0 +1,171 @@
+<th:block xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{index}">
+
+	<th:block layout:fragment="content">
+
+		<div class="production">
+			<div class="container">
+				<div class="bg-info p-3 text-center">
+
+					<h3>Lập kế hoạch sản xuất</h3>
+
+				</div>
+
+				<div>
+					<table class="table">
+						<thead class="thead-dark">
+							<tr class="text-center">
+								<th scope="col">Mã kế hoạch</th>
+								<th scope="col">Tên kế hoạch</th>
+								<th scope="col">Tên sản phẩm</th>
+								<th scope="col">Số lượng</th>
+								<th scope="col">Ngày bắt đầu</th>
+								<th scope="col">Số lượng công nhân</th>
+								<th scope="col">Số ngày dự định hoàn thành</th>
+								<th scope="col">Tình trạng</th>
+								<th scope="col">Thao tác</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Insert Data -->
+
+							<tr class="text-center">
+								<th scope="row">17</th>
+								<td>Sản xuất Robot T800</td>
+								<td>Robot T800</td>
+								<td>1</td>
+								<td>22/02/2020 19:30:50</td>
+								<td>10</td>
+								<td>5</td>
+								<td>Đang thực hiện</td>
+								<td><i class="fas fa-trash-alt text-danger mr-2"
+									data-id="17" id="delete" data-toggle="modal"
+									data-target="#deleteAct"></i> <i class="fas fa-edit text-info"
+									data-id="17" id="edit"></i></td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+
+				<div class="plan-form">
+						<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="planName">Tên kế hoạch</label> 
+							<input type="text"
+								class="form-control" id="planName">
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="planName">Ngày bắt đầu</label> 
+							<input type="text"
+								class="form-control" id="planName">
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="planName">Số ngày dự định hoàn thành</label> 
+							<input type="text"
+								class="form-control" id="planName">
+						</div>
+					</div>
+					
+					<div>
+						<h5>Sản phẩm sản xuất</h5>
+						<table class="table">
+						<thead class="thead-dark">
+							<tr class="text-center">
+								<th scope="col">Mã sản phẩm</th>
+								<th scope="col">Tên sản phẩm</th>
+								<th scope="col">Số lượng</th>
+								<th scope="col">Số lượng</th>
+								<th scope="col">Thao tác</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Insert Data -->
+
+							<tr class="text-center">
+								<th scope="row">17</th>
+								<td>Sản xuất Robot T800</td>
+								<td>10</td>
+								<td>Đang thực hiện</td>
+								<td><i class="fas fa-trash-alt text-danger mr-2"
+									data-id="17" id="delete" data-toggle="modal"
+									data-target="#deleteAct"></i> <i class="fas fa-edit text-info"
+									data-id="17" id="edit"></i></td>
+							</tr>
+
+						</tbody>
+					</table>
+						<div class="form-group col-md-6">
+							<label for="planName">Tên sản phẩm</label> 
+							<input type="text"
+								class="form-control" id="planName">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="planName">Số lượng</label> 
+							<input type="text"
+								class="form-control" id="planName">
+						</div>
+					</div>
+					
+					<div>
+						<h5>Nguyên vật  liệu</h5>
+						<table class="table">
+						<thead class="thead-dark">
+							<tr class="text-center">
+								<th scope="col">Mã sản phẩm</th>
+								<th scope="col">Tên sản phẩm</th>
+								<th scope="col">Số lượng</th>
+								<th scope="col">Số lượng</th>
+								<th scope="col">Thao tác</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Insert Data -->
+
+							<tr class="text-center">
+								<th scope="row">17</th>
+								<td>Sản xuất Robot T800</td>
+								<td>10</td>
+								<td>Đang thực hiện</td>
+								<td><i class="fas fa-trash-alt text-danger mr-2"
+									data-id="17" id="delete" data-toggle="modal"
+									data-target="#deleteAct"></i> <i class="fas fa-edit text-info"
+									data-id="17" id="edit"></i></td>
+							</tr>
+
+						</tbody>
+					</table>
+						<div class="form-group col-md-6">
+							<label for="planName">Tên sản phẩm</label> 
+							<input type="text"
+								class="form-control" id="planName">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="planName">Số lượng</label> 
+							<input type="text"
+								class="form-control" id="planName">
+						</div>
+					</div>
+					
+					<div>
+						<h5>Công nhân</h5>
+						<button>Thêm công nhân</button>
+					</div>
+					
+					
+					
+					
+				</div>
+	
+			</div>
+		</div>
+
+	</th:block>
+</th:block>

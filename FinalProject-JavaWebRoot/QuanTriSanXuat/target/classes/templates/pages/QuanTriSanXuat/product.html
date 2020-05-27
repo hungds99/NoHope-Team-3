@@ -1,0 +1,207 @@
+<th:block xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{index}">
+
+	<th:block layout:fragment="content">
+
+		<div class="production">
+			<div class="container">
+				<div class="bg-info p-3 text-center">
+					<h3>Mặt Hàng</h3>
+				</div>
+
+				<div class="mt-2">
+					<button class="btn btn-success btn-sm" data-toggle="modal"
+						data-target="#staticBackdrop">Thêm mới</button>
+				</div>
+
+				<div class="mt-2">
+					<div class="row">
+						<div class="col-3">
+							<div class="card bg-light mb-3" style="max-width: 18rem;">
+								<div class="card-header">Robot</div>
+								<div class="card-body">
+									<h5 class="card-title">Dead Hunt Robot</h5>
+									<p class="card-text">Some quick example text to build on
+										the card title and make up the bulk of the card's content.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="staticBackdrop" tabindex="-1"
+			role="dialog" aria-labelledby="staticBackdropLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="staticBackdropLabel">Thêm mặt
+							hàng sản xuất</h5>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+
+						<div class="form-row">
+							<div class="form-group col-6">
+								<label for="productName">Tên mặt hàng</label> <input type="text"
+									class="form-control" id="productName">
+							</div>
+							<div class="form-group col-6">
+								<label for="description">Mô tả</label> <input type="text"
+									class="form-control" id="description">
+							</div>
+						</div>
+
+						<div>
+							<h5>Nguyên liệu cần :</h5>
+							<div class="form-row">
+								<div class="form-group col-6">
+									<label for="material">Nguyên liệu</label> <input type="text"
+										class="form-control" id="material" data-id=""> 
+
+									<ul class="material-select" id="material-select">
+									</ul>
+
+									<label for="amount">Số lượng</label> <input type="number"
+										class="form-control" id="materialAmount">
+									<div class="text-center mt-2">
+										<button type="button" class="btn btn-sm btn-outline-success"
+											id="materialSave">Xác nhận</button>
+									</div>
+								</div>
+
+								<div class="form-group col-6">
+									<table class="table table-bordered text-center">
+										<thead>
+											<tr>
+												<th scope="col">ID</th>
+												<th scope="col">Tên nguyên liệu</th>
+												<th scope="col">Số lượng</th>
+											</tr>
+										</thead>
+										<tbody id="material-table">
+											<tr>
+												<th scope="row">1</th>
+												<td>Tay robot</td>
+												<td>10</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Đóng</button>
+						<button type="button" class="btn btn-primary" id="saveProduct">Lưu</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+		
+		
+		window.onload = materialProcessing();
+		
+		function materialProcessing() {
+			
+			let materialInp = document.getElementById('material');
+			let material_select = document.getElementById('material-select');
+			let materialSave = document.getElementById('materialSave');
+			let productSave = document.getElementById('saveProduct');
+			
+			materialInp.addEventListener('input', searchMaterial );
+			
+			function searchMaterial() {
+				let term = materialInp.value;
+				
+				if(term.trim() === '') return;
+				
+				axios.get('/api/n3/material/search',{
+				    params: {
+				        term: term.trim()
+				      }
+				    })
+				  .then(function (response) {
+				    console.log(response.data);
+				    renderListSelector(response.data);
+				  })
+				  .catch(function (error) {
+				    // handle error
+				    console.log(error);
+				  });
+			}
+			
+			function renderListSelector(materials) {
+				let content = '';
+				if (materials === undefined || materials.length == 0) {
+					content = `<p>Nguyên liệu không còn.</p>`;
+				}
+				materials.forEach(function (material) {
+					content += `
+						<li data-id=${material.id}>${material.materialName}</li>
+					`;
+				})
+				
+				material_select.innerHTML = content;
+				material_select.style.display = 'block';
+				
+				let materialList = material_select.querySelectorAll('li');
+				materialSelect(materialList);
+			}
+			
+			function materialSelect(materialList) {
+				materialList.forEach(function(li) {
+					li.addEventListener('click', materialClick);
+				})
+				
+				function materialClick () {
+					materialInp.value = this.textContent;
+					materialInp.setAttribute('data-id', this.getAttribute('data-id'))
+					console.log(materialInp);
+					material_select.style.display = 'none';
+				}
+			}
+			
+			materialSave.addEventListener('click', saveMaterial);
+			
+			function saveMaterial() {
+				let material_table = document.getElementById('material-table');
+				let materialAmount = document.getElementById('materialAmount');
+				
+				material_table.innerHTML += `
+					<tr>
+					<th scope="row">${materialInp.getAttribute('data-id')}</th>
+					<td>${materialInp.value}</td>
+					<td>${materialAmount.value}</td>
+					</tr>
+				`;
+			}
+			
+			productSave.addEventListener('click', saveProduct);
+			
+			function saveProduct() {
+				alert('save product !');
+				
+				let productName = document.getElementById('productName');
+				let description = document.getElementById('description');
+			}
+			
+			
+		}
+		
+		</script>
+
+	</th:block>
+</th:block>

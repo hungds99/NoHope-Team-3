@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<th:block layout:insert="~{fragments/common/headTag}"></th:block>
+</head>
+
+<body translate="no">
+	<div class="container-fluid p-0">
+
+		<!-- Header -->
+		<th:block layout:insert="~{fragments/common/header}"></th:block>
+
+		<!-- container -->
+		<div class="row mt-5 pt-1" id="body-row">
+
+			<!-- Side bar -->
+			<th:block layout:insert="~{fragments/common/sideBar}"></th:block>
+
+			<div class="col">
+				<th:block layout:fragment="content" />
+			</div>
+		</div>
+	</div>
+
+	<th:block layout:insert="~{fragments/common/jsSource}"></th:block>
+</body>
+
+</html>

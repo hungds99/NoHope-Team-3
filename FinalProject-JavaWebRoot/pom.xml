@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.javaweb</groupId>
+  <artifactId>FinalProject-JavaWebRoot</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>Application</module>
+    <module>Common</module>
+    <module>QuanTriKho</module>
+    <module>QuanTriBanHang</module>
+    <module>QuanTriNhanSu</module>
+    <module>QuanTriSuaChua</module>
+    <module>QuanTriMuaHang</module>
+    <module>QuanTriTaiChinh</module>
+    <module>QuanTriMarketing</module>
+    <module>QuanTriSanXuat</module>
+  </modules>
+</project>

@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "storage",
+      "type": "com.javaweb.common.filestorage.StorageProperties",
+      "sourceType": "com.javaweb.common.filestorage.StorageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "storage.location",
+      "type": "java.lang.String",
+      "description": "Folder location for storing files",
+      "sourceType": "com.javaweb.common.filestorage.StorageProperties"
+    }
+  ],
+  "hints": []
+}

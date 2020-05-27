@@ -1,0 +1,92 @@
+<th:block xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{index}">
+
+	<th:block layout:fragment="content">
+		
+		<div class="production">
+			<div class="container">
+				<div class="bg-info p-3 text-center">
+
+					<h3>Nguyên Vật Liệu</h3>
+
+				</div>
+				
+				<div class="notification offset-9">
+                        <div class="notification-content" id="notifi">
+                            <p id="notifi-content">Vui Lòng Điền Đầy Đủ Thông Tin.</p>
+                        </div>
+                </div>
+
+				<div class="bg-light p-3">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="materialName">Tên Nguyên Liệu</label> 
+							<input type="text"
+								class="form-control" id="materialName">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="amount">Số Lượng</label> <input
+								type="text" class="form-control" id="amount">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="unit">Đơn Vị Tính</label> <input type="text"
+								class="form-control" id="unit">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="price">Giá Tiền</label> <input type="text"
+								class="form-control" id="price">
+						</div>
+					</div>
+					
+					<div class="text-center">
+						<button type="button" class="btn btn-sm btn-outline-success" id="save">Xác nhận</button>
+					</div>
+					
+
+				</div>
+
+				<div>
+					<table class="table">
+						<thead class="thead-dark">
+							<tr class="text-center">
+								<th scope="col">Mã nguyên liệu</th>
+								<th scope="col">Tên nguyên liệu</th>
+								<th scope="col">Số lượng</th>
+								<th scope="col">Đơn vị tính</th>
+								<th scope="col">Giá tiền</th>
+								<th scope="col">Thao tác</th>
+							</tr>
+						</thead>
+						<tbody id="tbody">
+							<!-- Insert Data -->
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="deleteAct" tabindex="-1" role="dialog" aria-labelledby="deleteActLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="mr-2">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body text-center">
+		        	<h5>Bạn có chắc chắn muốn xóa ?</h5>
+		        	<div>
+		        	 <button class="btn btn-danger btn-sm" id="accept" data-dismiss="modal">Xác nhận</button>
+		        	</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+	</th:block>
+</th:block>
